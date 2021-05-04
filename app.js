@@ -6,7 +6,7 @@ function addSpan(val){
 }
 
 function main(){
-    mywrker = new Worker('/worker.js')
+    mywrker = new Worker('worker.js')
     let arr = [1,2,3,4,5,6,7]
     mywrker.postMessage({array:arr, cmd:'setarray'})
     mywrker.onmessage = function(message){
